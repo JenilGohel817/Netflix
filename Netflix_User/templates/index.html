@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block content %}
+    <main id="n-theme-main">
+        <section id="n-theme" class="main-header-part">
+            <div class="top-part d-flex align-items-center">
+                <div class="logo-home me-auto">
+                    <a href="{% url 'in' %}"><img src="{% static 'images/netflix.png' %}" alt="netflix"
+                                                  class="netflix-logo"></a>
+                </div>
+                <div class="logo-home-down">
+                    <a class="logo-usm text-white">UNLIMITED TV SHOWS & MOVIES</a>
+                    <a class="in" aria-current="page" href="{% url 'signin' %}">Join Now</a>
+                    <a class="n-in text-uppercase" aria-current="page" href="{% url 'signin' %}">Sign In</a>
+                </div>
+            </div>
+        </section>
+        <section class="section-movie">
+            <div class="section-movie-pt">
+                <div class="nm-collections-metadata-title"><h1>Movies</h1></div>
+                <div class="nm-collections-metadata-synopsis text-white"> Movies move us like nothing else can, whether
+                    they’re
+                    scary, funny, dramatic, romantic or anywhere in-between. So many titles, so much to experience.
+                </div>
+            </div>
+        </section>
+
+        <div class="nm-collections-row">
+            <h2 class="nm-collections-row-name">Popular on Netflix</h2>
+            <ul class="nm-content-horizontal-row-item-container">
+                <li class="nm-content-horizontal-row-item"><a
+                        class="nm-collections-title nm-collections-link" href="{% url 'NetflixViews' %}"><img class="nm-collections-title-img"
+                                                                              src="{% static 'images/bg8.jpg' %}"
+                                                                              alt="">
+                    <p
+                            class="nm-collections-title-name">RRR (Hindi)</p></a></li>
+            </ul>
+        </div>
+
+        <div class="nm-collections-row">
+            <h2 class="nm-collections-row-name">Adventures</h2>
+            <ul class="nm-content-horizontal-row-item-container">
+                <li class="nm-content-horizontal-row-item"><a
+                        class="nm-collections-title nm-collections-link"><img class="nm-collections-title-img"
+                                                                              src="{% static 'images/bg1.jpg' %}"
+                                                                              alt="">
+                    <p
+                            class="nm-collections-title-name">Spider-Man: No Way Home</p></a></li>
+            </ul>
+        </div>
+
+        <div class="nm-collections-row">
+            <h2 class="nm-collections-row-name">Horror Movies</h2>
+            <ul class="nm-content-horizontal-row-item-container">
+                <li class="nm-content-horizontal-row-item"><a
+                        class="nm-collections-title nm-collections-link"><img class="nm-collections-title-img"
+                                                                              src="{% static 'images/bg7.jpg' %}"
+                                                                              alt="">
+                    <p
+                            class="nm-collections-title-name">The Dark Knight</p></a></li>
+            </ul>
+        </div>
+
+    </main>
+{% endblock %}
+
+{% block js %}{% endblock %}

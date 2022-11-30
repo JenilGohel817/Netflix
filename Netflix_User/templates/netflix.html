@@ -1,0 +1,247 @@
+{% extends 'base.html' %} {% load static %} {% block title %}India - Watch TV
+Shows Online, Watch Movies Online{% endblock %} {% block content %}
+<main id="n-theme">
+  <section class="netflix-banner text-white text-center position-relative">
+    <nav id="Nnavbar" class="navbar navbar-expand-lg pt-4">
+      <div class="container-fluid">
+        <a href="{% url 'in' %}"
+          ><img
+            src="{% static 'images/netflix.png' %}"
+            alt="netflix"
+            class="netflix-logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <select
+            id="change-lng"
+            class="btn ms-auto btn-outline-success position-relative"
+          >
+            <option selected><i class="fas fa-earth"></i> English</option>
+            <option>Hindi</option>
+          </select>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="d-flex ms-4 align-items-center nav-item">
+              <a class="sign-in" aria-current="page" href="{% url 'signin' %}"
+                >Sign In</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="netflix-content">
+      <h1>Unlimited movies, TV shows and more.</h1>
+      <h2 class="card-subtitle">Watch anywhere. Cancel anytime.</h2>
+      <h3 class="email-form-title">
+        Ready to watch? Enter your email to create or restart your membership.
+      </h3>
+      <form action="" method="post">
+        <div class="netflix-get-start d-inline-flex position-relative">
+          <input type="text" id="ngs-email" placeholder="Email Address" />
+          <a
+            class="btn btn-red d-flex align-items-center"
+            href="{% url 'index' %}"
+            id="ngs-btn"
+            >Get Started <i class="arw-right fa fa-arrow-right"></i>
+          </a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="our-story-card netflix-part-one">
+    <div class="container animation-card-container">
+      <div class="row">
+        <div class="col-lg-6 col-6 align-self-center">
+          <h1>Enjoy on your TV.</h1>
+          <h2>
+            Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+            players and more.
+          </h2>
+        </div>
+        <div class="col-lg-6 col-6 align-self-center">
+          <div class="our-story-card-animation-container">
+            <img id="tv-img" src="{% static 'images/tv.png' %}" />
+            <video class="our-story-card-video" autoplay playsinline muted loop>
+              <source
+                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-story-card netflix-part-two">
+    <div class="container animation-card-container">
+      <div class="row">
+        <div class="col-lg-6 col-6 align-self-center" id="section-img-two">
+          <img id="tv-img" src="{% static 'images/mobile.jpg' %}" />
+          <div class="our-story-card-animation position-relative">
+            <div class="our-story-card-animation-image">
+              <img id="animation-img" src="{% static 'images/boxshot.png' %}" />
+            </div>
+            <div class="our-story-card-animation-text me-auto">
+              <div class="text-0">Stranger Things</div>
+              <div class="text-1">Downloading...</div>
+            </div>
+            <div class="our-story-card-animation-custom-out">
+              <div class="our-story-card-animation-custom"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-6 align-self-center">
+          <h1>Download your shows to watch offline.</h1>
+          <h2>
+            Save your favourites easily and always have something to watch.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-story-card netflix-part-three">
+    <div class="container animation-card-container">
+      <div class="row">
+        <div class="col-lg-6 col-6 align-self-center">
+          <h1 class="n-fs">Watch everywhere.</h1>
+          <h2 class="m-sty">
+            Stream unlimited movies and TV shows on your phone, tablet, laptop,
+            and TV.
+          </h2>
+        </div>
+        <div class="col-lg-6 col-6 align-self-center">
+          <div class="our-story-card-animation-container">
+            <img id="tv-img" src="{% static 'images/device-pile-in.png' %}" />
+            <video
+              class="our-story-card-devices"
+              autoplay
+              playsinline
+              muted
+              loop
+            >
+              <source
+                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-story-card netflix-part-four">
+    <div class="container animation-card-container">
+      <div class="row">
+        <div class="col-lg-6 col-6 align-self-center" id="section-img-two">
+          <img id="tv-img" src="{% static 'images/child.png' %}" />
+        </div>
+        <div class="col-lg-6 col-6 align-self-center">
+          <h1>Create profiles for children.</h1>
+          <h2>
+            Send children on adventures with their favourite characters in a
+            space made just for them—free with your membership.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-story-card pt-0 pb-0 footer">
+    <div class="footer-card">
+      <div class="site-footer-wrapper">
+        <div class="site-footer">
+          <p class="footer-top">
+            Questions? Call
+            <a class="footer-top-a" href="tel:000-800-040-1843 "
+              >000-800-040-1843
+            </a>
+          </p>
+          <div class="row">
+            <div class="col-3">
+              <ul class="footer-link-menu">
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">FAQ</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Investor Relations</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Privacy</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Speed Test</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <ul class="footer-link-menu">
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Help Centre</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Jobs</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Cookie Preferences</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Legal Notices</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <ul class="footer-link-menu">
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Account</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Ways to Watch</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Corporate Information</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Only on Netflix</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <ul class="footer-link-menu">
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Media Centre</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Terms of Use</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <select
+            id="change-new-lng"
+            class="btn ms-auto btn-outline-success position-relative"
+          >
+            <option selected><i class="fas fa-earth"></i> English</option>
+            <option>Hindi</option>
+          </select>
+          <p class="footer-country">Netflix India</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %} {% block js %}{% endblock %}

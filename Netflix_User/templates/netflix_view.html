@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block content %}
+    <main id="n-theme-main">
+        <section id="n-theme" class="main-header-part">
+            <div class="top-part d-flex align-items-center">
+                <div class="logo-home me-auto">
+                    <a href="{% url 'in' %}"><img src="{% static 'images/netflix.png' %}" alt="netflix"
+                                                  class="netflix-logo"></a>
+                </div>
+                <div class="logo-home-down">
+                    <a class="logo-usm text-white">UNLIMITED TV SHOWS & MOVIES</a>
+                    <a class="in" aria-current="page" href="{% url 'signin' %}">Join Now</a>
+                    <a class="n-in text-uppercase" aria-current="page" href="{% url 'signin' %}">Sign In</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="movie-wth position-relative">
+            <div class="netflix_view nmtitle-section">
+                <div class="netflix_view_in">
+                    <div class="netflix-flx info-container">
+                        <div class="logo-movie">
+                            <img src="{% static 'images/movie_icon1.jpg' %}">
+                        </div>
+                    </div>
+                    <div class="info-container-lft">
+                        <div class="details-container text-white">
+                            <div class="title-info"><h1 class="title-title"
+                            >RRR
+                                (Hindi)</h1>
+                                <div class="title-info-metadata-wrapper"><span
+                                        class="title-info-metadata-item item-year"</span>2022<span
+                                        role="presentation" class="info-spacer"> | </span><span
+                                        class="title-info-metadata-item item-maturity"><span
+                                        class="maturity-rating"><span
+                                        class="maturity-number">A </span></span></span><span role="presentation"
+                                                                                             class="info-spacer"> | </span><span
+                                        class="title-info-metadata-item item-runtime"><span
+                                        class="duration">3h 5m</span></span><span role="presentation"
+                                                                                  class="info-spacer"> | </span><a
+                                        class="title-info-metadata-item item-genre"
+                                        href=""
+                                        data-uia="item-genre">Dramas</a></div>
+                                <div class="title-info-synopsis-talent">
+                                    <div class="title-info-synopsis">A fearless warrior
+                                        on a perilous mission comes face to face with a steely cop serving British
+                                        forces in this epic saga set in pre-independent India.
+                                    </div>
+                                    <div class="title-info-talent">
+                                        <div class="title-data-info-item item-starring"><span
+                                                class="title-data-info-item-label">Starring:</span><span
+                                                class="title-data-info-item-list">NTR Jr.,Ram Charan,Ajay Devgn</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="value-prop-with-cta">
+                    <img src="{% static 'images/netflix_favicon.ico' %}">
+                    <div class="value-prop text-white">Watch all you want.</div>
+                    <div class="value-prop-wrapper ms-auto">
+                        <div class="">
+                            <button class="btn btn-get-started btn-red btn-large" type="submit"
+                                    tabindex="0" role="link">JOIN NOW
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nmtitle-section" id="section-hook">
+            <div class="hook-hr"></div>
+            <div class="hook-text" data-uia="hook-text">N.T. Rama Rao Jr. and Ram Charan star in this larger-than-life
+                period film from director S.S. Rajamouli (“Baahubali”).
+            </div>
+            <div class="hook-hr"></div>
+        </section>
+
+        <section class="nmtitle-section mb-5" id="section-more-details" data-uia="section-more-details">
+            <div class="section-header" data-uia="section-header"><h2 class="section-header-text section-item"
+                                                                      data-uia="section-header-text">More Details</h2>
+            </div>
+            <div class="more-details-container">
+                <div class="more-details-cell cell-download" data-uia="more-details-cell-download">
+                    <div class="more-details-label">Watch offline</div>
+                    <div class="more-details-item-container"><span class="more-details-item item-download"
+                                                                   data-uia="more-details-item-download">Available to download</span>
+                    </div>
+                </div>
+                <div class="more-details-cell cell-genres" data-uia="more-details-cell-genres">
+                    <div class="more-details-label">Genres</div>
+                    <div class="more-details-item-container"><span class="more-details-item item-genres"
+                                                                   data-uia="more-details-item-genres"><a
+                            class="more-details-item item-genres" href="https://www.netflix.com/in/browse/genre/1365">Action &amp; Adventure</a>,</span><span
+                            class="more-details-item item-genres" data-uia="more-details-item-genres"><a
+                            class="more-details-item item-genres" href="https://www.netflix.com/in/browse/genre/5763">Dramas</a></span>
+                    </div>
+                </div>
+                <div class="more-details-cell cell-mood-tag" data-uia="more-details-cell-mood-tag">
+                    <div class="more-details-label">This movie is...</div>
+                    <div class="more-details-item-container"><span class="more-details-item item-mood-tag"
+                                                                   data-uia="more-details-item-mood-tag">Adrenaline Rush</span>
+                    </div>
+                </div>
+                <div class="more-details-cell cell-audio" data-uia="more-details-cell-audio">
+                    <div class="more-details-label">Audio</div>
+                    <div class="more-details-item-container"><span class="more-details-item item-audio"
+                                                                   data-uia="more-details-item-audio">Hindi</span></div>
+                </div>
+                <div class="more-details-cell cell-subtitle" data-uia="more-details-cell-subtitle">
+                    <div class="more-details-label">Subtitles</div>
+                    <div class="more-details-item-container"><span class="more-details-item item-subtitle"
+                                                                   data-uia="more-details-item-subtitle">English<!-- -->,</span><span
+                            class="more-details-item item-subtitle" data-uia="more-details-item-subtitle">Hindi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="more-details-container-cast">
+                <div class="more-details-cell cell-cast">
+                    <div class="more-details-label">Cast</div>
+                    <div class="more-details-item-container"><span class="more-details-item item-cast"
+                    >NTR Jr.</span><span
+                            class="more-details-item item-cast">Ram Charan</span><span
+                            class="more-details-item item-cast">Ajay Devgn</span><span
+                            class="more-details-item item-cast">Alia Bhatt</span><span
+                            class="more-details-item item-cast"
+                    >Shriya Saran</span><span
+                            class="more-details-item item-cast"
+                    >Samuthirakani</span><span
+                            class="more-details-item item-cast"
+                    >Ray Stevenson</span><span
+                            class="more-details-item item-cast"
+                    >Alison Doody</span><span
+                            class="more-details-item item-cast">Olivia Morris</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-story-card pt-0 pb-0 footer">
+            <div class="footer-card">
+                <div class="site-footer-wrapper">
+                    <div class="site-footer">
+                        <p class="footer-top">Questions? Call <a class="footer-top-a" href="tel:000-800-040-1843 ">000-800-040-1843 </a>
+                        </p>
+                        <div class="row">
+                            <div class="col-3">
+                                <ul class="footer-link-menu">
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">FAQ</a>
+                                    </li>
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Investor Relations</a>
+                                    </li>
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Privacy</a>
+                                    </li>
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Speed Test</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-3">
+                                <ul class="footer-link-menu">
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Help Centre</a>
+                                    </li>
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Jobs</a>
+                                    </li>
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Cookie Preferences</a>
+                                    </li>
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Legal Notices</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-3">
+                                <ul class="footer-link-menu">
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Account</a>
+                                    </li>
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Ways to Watch</a>
+                                    </li>
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Corporate Information</a>
+                                    </li>
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Only on Netflix</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-3">
+                                <ul class="footer-link-menu">
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Media Centre</a>
+                                    </li>
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Terms of Use</a>
+                                    </li>
+                                    <li class="footer-link-item">
+                                        <a class="footer-link" href="">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <select id="change-new-lng" class="btn ms-auto btn-outline-success position-relative">
+                            <option selected><i class="fas fa-earth"></i> English</option>
+                            <option>Hindi</option>
+                        </select>
+                        <p class="footer-country">Netflix India</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
+{% block js %}{% endblock %}

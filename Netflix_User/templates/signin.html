@@ -1,0 +1,187 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<main id="n-theme">
+  <section class="netflix-banner text-white text-center position-relative">
+    <nav id="Nnavbar" class="navbar navbar-expand-lg pt-4">
+      <div class="container-fluid">
+        <a href="{% url 'in' %}"
+          ><img
+            src="{% static 'images/netflix.png' %}"
+            alt="netflix"
+            class="netflix-logo"
+        /></a>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="login-body">
+        <div class="hybrid-login-form hybrid-login-form-signup">
+          <div class="hybrid-login-form-main">
+            <h1 data-uia="login-page-title">Sign In</h1>
+            <form method="POST" class="mt-3" action="" novalidate>
+              {% csrf_token %}
+              <div class="login-page-emp mb-3">
+                <input
+                  class="form-control nfTextField"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email Address"
+                />
+              </div>
+              <div class="login-page-pass mb-3">
+                <input
+                  class="form-control nfTextField"
+                  type="password"
+                  id="pass1"
+                  name="pass1"
+                  placeholder="Password"
+                />
+              </div>
+              <button
+                class="btn login-button btn-submit btn-small"
+                type="submit"
+              >
+                Sign in
+              </button>
+            </form>
+            <div class="hybrid-login-form-help">
+              <div class="ui-binary-input login-remember-me">
+                <input
+                  type="checkbox"
+                  class=""
+                  name="rememberMe"
+                  id="bxid_rememberMe_true"
+                  value="true"
+                  tabindex="0"
+                  data-uia="rememberMe"
+                  checked=""
+                /><label for="bxid_rememberMe_true"
+                  ><span class="login-remember-me-label-text"
+                    >Remember me</span
+                  ></label
+                >
+                <div class="helper"></div>
+              </div>
+              <a
+                class="link login-help-link ms-auto"
+                target="_self"
+                data-uia="login-help-link"
+                >Need help?</a
+              >
+            </div>
+          </div>
+          <div class="hybrid-login-form-other">
+            <div class="login-signup-now" data-uia="login-signup-now">
+              New to Netflix?
+              <a class=" " target="_self" href="{% url 'signup' %}"
+                >Sign up now</a
+              >.
+            </div>
+            <div
+              class="recaptcha-terms-of-use"
+              data-uia="recaptcha-terms-of-use"
+            >
+              <p>
+                <span
+                  >This page is protected by Google reCAPTCHA to ensure you're
+                  not a bot.</span
+                >&nbsp;<button
+                  class="recaptcha-terms-of-use--link-button"
+                  data-uia="recaptcha-learn-more-button"
+                >
+                  Learn more.
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-0 pb-0 footer">
+    <div class="footer-card">
+      <div class="site-footer-wrapper">
+        <div class="site-footer">
+          <p class="footer-top">
+            Questions? Call
+            <a class="footer-top-a" href="tel:000-800-040-1843 "
+              >000-800-040-1843
+            </a>
+          </p>
+          <div class="row">
+            <div class="col-3">
+              <ul class="footer-link-menu">
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">FAQ</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Investor Relations</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Privacy</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Speed Test</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <ul class="footer-link-menu">
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Help Centre</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Jobs</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Cookie Preferences</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Legal Notices</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <ul class="footer-link-menu">
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Account</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Ways to Watch</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Corporate Information</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Only on Netflix</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <ul class="footer-link-menu">
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Media Centre</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Terms of Use</a>
+                </li>
+                <li class="footer-link-item">
+                  <a class="footer-link" href="">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <select
+            id="change-new-lng"
+            class="btn ms-auto btn-outline-success position-relative"
+          >
+            <option selected><i class="fas fa-earth"></i> English</option>
+            <option>Hindi</option>
+          </select>
+          <p class="footer-country">Netflix India</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %} {% block js %}{% endblock %}
